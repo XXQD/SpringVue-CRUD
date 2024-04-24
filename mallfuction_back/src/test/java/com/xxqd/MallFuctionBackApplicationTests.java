@@ -19,4 +19,14 @@ class MallFuctionBackApplicationTests {
         System.out.println(goodsLists);
     }
 
+    @Test
+    void updateTest(){
+        goodsDao.updateGoods(new GoodsList(1,"手套",1));
+    }
+
+    @Test
+    void addTest(){
+        goodsDao.addNewList(new GoodsList("水杯",1));
+    }
+
 }

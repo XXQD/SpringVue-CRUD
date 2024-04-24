@@ -15,9 +15,19 @@ import java.util.List;
 public class GoodsListController {
     @Resource
     private GoodsListService service;
-    @CrossOrigin
+
     @GetMapping("/search")
     public Result searchTest(){
         return Result.success(service.selectAll());
+    }
+
+    @PutMapping("/update")
+    public Result updateTest(@RequestBody GoodsList goodsList){
+        return Result.success(service.updateInfo(goodsList));
+    }
+
+    @PostMapping("/add")
+    public Result addTest(@RequestBody GoodsList goodsList){
+        return Result.success(service.addNewList(goodsList));
     }
 }

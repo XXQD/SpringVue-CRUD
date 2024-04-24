@@ -9,6 +9,13 @@ import lombok.NonNull;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GoodsList {
+
+    private Integer id;
     private String name;
     private Integer amount;
+
+    public GoodsList(String name,Integer amount){
+        this.name = name;
+        this.amount = amount;
+    }
 }

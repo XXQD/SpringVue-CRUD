@@ -8,5 +8,7 @@ export const useCounterStore = defineStore('counter', () => {
     count.value++
   }
 
-  return { count, doubleCount, increment }
+  const isEditVisible = false
+
+  return { count, doubleCount, increment,isEditVisible }
 })

@@ -46,7 +46,7 @@
 
           <el-col :span="4">
             <el-link :underline="false">
-              <span>账户切换</span>
+              <span>图片</span>
             </el-link>
           </el-col>
 

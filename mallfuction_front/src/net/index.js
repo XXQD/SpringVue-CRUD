@@ -33,4 +33,19 @@ function get(url,success,failure = defaultFailure,error = defaultError){
     }).catch(error)
 }
 
-export {post,get}
+function put(url,data,success,failure = defaultFailure,error = defaultError){
+    axios.put(url,data,{
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        withCredentials: true
+    }).then(({data}) => {
+        if(data.success){
+            success(data.data,data.status)
+        }else{
+            failure(data.data,data.status)
+        }
+    }).catch(error)
+}
+
+export {post,get,put}
