@@ -1,10 +1,7 @@
 package com.xxqd.dao;
 
 import com.xxqd.entity.GoodsList;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -18,4 +15,10 @@ public interface GoodsDao {
 
     @Insert("insert into shoplist(name,amount) values(#{name},#{amount}) ")
     Integer addNewList(GoodsList goodsList);
+
+    @Delete("delete from shoplist where id = #{id}")
+    Integer deleteGood(Integer id);
+
+    @Select("select * from shoplist where name like CONCAT('%',#{name},'%')")
+    List<GoodsList> selectByName(String name);
 }

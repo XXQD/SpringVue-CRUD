@@ -25,4 +25,14 @@ public class GoodsListServiceImpl implements GoodsListService {
     public Integer addNewList(GoodsList goodsList) {
         return goodsDao.addNewList(goodsList);
     }
+
+    @Override
+    public Integer deleteGood(Integer id) {
+        return goodsDao.deleteGood(id);
+    }
+
+    @Override
+    public List<GoodsList> selectByName(String name) {
+        return goodsDao.selectByName(name);
+    }
 }

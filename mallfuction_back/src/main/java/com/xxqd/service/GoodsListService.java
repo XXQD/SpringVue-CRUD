@@ -10,4 +10,8 @@ public interface GoodsListService {
     Integer updateInfo(GoodsList goodsList);
 
     Integer addNewList(GoodsList goodsList);
+
+    Integer deleteGood(Integer id);
+
+    List<GoodsList> selectByName(String name);
 }

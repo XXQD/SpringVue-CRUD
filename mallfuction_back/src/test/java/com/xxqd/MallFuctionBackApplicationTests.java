@@ -29,4 +29,15 @@ class MallFuctionBackApplicationTests {
         goodsDao.addNewList(new GoodsList("水杯",1));
     }
 
+    @Test
+    void deleteTest(){
+        System.out.println(goodsDao.deleteGood(13));
+
+    }
+
+    @Test
+    void selectByName(){
+        System.out.println(goodsDao.selectByName("袜子"));
+    }
+
 }

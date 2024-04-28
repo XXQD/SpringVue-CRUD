@@ -6,7 +6,7 @@ const defaultError = () => {ElMessage.error('系统异常')}
 function post(url,data,success,failure = defaultFailure,error = defaultError){
     axios.post(url,data,{
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/json'
         },
         withCredentials: true
     }).then(({data}) => {
@@ -48,4 +48,19 @@ function put(url,data,success,failure = defaultFailure,error = defaultError){
     }).catch(error)
 }
 
-export {post,get,put}
+function deleted(url,success,failure = defaultFailure,error = defaultError){
+    axios.delete(url,{
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        withCredentials: true
+    }).then(({data}) => {
+        if(data.success){
+            success(data.data,data.status)
+        }else{
+            failure(data.data,data.status)
+        }
+    }).catch(error)
+}
+
+export {post,get,put,deleted}
