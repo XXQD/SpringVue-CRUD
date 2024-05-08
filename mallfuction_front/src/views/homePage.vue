@@ -8,7 +8,7 @@
    <div style="margin-top: 20px">
      <h2>简单介绍:</h2>
      <div class="profile">
-       <p>后端技术栈: SpringBoot + Mybatis + Redis</p>
+       <p>后端技术栈: SpringBoot + Mybatis</p>
        <p>前端技术栈: Vue3 + Axios + ElementPlus</p>
        <p>其他技术: Mysql + Git + Maven + Vite</p>
        <p>开发工具: Idea + VsCode + PostMan + Navicat</p>
